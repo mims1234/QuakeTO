@@ -3,6 +3,7 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "ms": "^2.1.1",
+    "nodemon": "^1.17.5",
     "superagent": "^3.8.2"
   },
   "version": "1.0.0",
