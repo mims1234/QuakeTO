@@ -1,9 +1,17 @@
 {
-  "name": "",
-  "version": "",
+  "name": "quaketo",
   "dependencies": {
     "discord.js": "^11.3.2",
     "ms": "^2.1.1",
     "superagent": "^3.8.2"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
