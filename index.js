@@ -79,7 +79,7 @@ bot.on("message" , async message => {
 
     if(cmd ==="becky")
     {
-        return message.channel.send("Ah Pew Pew >.>");
+        return message.channel.send("Buck Buck Backack");
     }
 
 
