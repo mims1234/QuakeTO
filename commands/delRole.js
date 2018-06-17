@@ -48,8 +48,8 @@ module.exports.run = async (bot,message,args) => {
         if(!rmember.roles.has(gRole.id)) return message.channel.send(`Doesn't have that ${role}.`);
         await(rmember.removeRole(gRole.id));
 
-        let reportschannel = message.guild.channels.find(`name` , "quakerole-log");
-        if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+        //let reportschannel = message.guild.channels.find(`name` , "quakerole-log");
+        //if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
         try
         {
