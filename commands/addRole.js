@@ -47,14 +47,18 @@ module.exports.run = async (bot,message,args) => {
 
         if(rmember.roles.has(gRole.id)) return message.channel.send(`${role} has been already added.`);
         await(rmember.addRole(gRole.id));
+        quakerole-log
+
+        let reportschannel = message.guild.channels.find(`name` , "quakerole-log");
+        if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
         try
         {
-            await Sender.send(`${role} role added to <@${rmember.id}>.`);
+            await reportschannel.send(`${role} role added to <@${rmember.id}>.`);
         }
         catch(e)
         {       
-            message.channel.send(`${role} role added to <@${rmember.id}> . (DM was Blocked)`);
+            message.channel.send(`${role} role added to <@${rmember.id}> . (#quakerole-log was missing)`);
         }
     }
 }

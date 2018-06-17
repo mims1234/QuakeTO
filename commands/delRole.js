@@ -48,13 +48,16 @@ module.exports.run = async (bot,message,args) => {
         if(!rmember.roles.has(gRole.id)) return message.channel.send(`Doesn't have that ${role}.`);
         await(rmember.removeRole(gRole.id));
 
+        let reportschannel = message.guild.channels.find(`name` , "quakerole-log");
+        if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+
         try
         {
-            await Sender.send(`${role} role removed to <@${rmember.id}> .`);
+            await reportschannel.send(`${role} role removed to <@${rmember.id}> .`);
         }
         catch(e)
         {       
-            message.channel.send(`${role} role removed to <@${rmember.id}> . (DM was Blocked)`);
+            message.channel.send(`${role} role removed to <@${rmember.id}> . (#quakerole-log was missing)`);
         }
     }
 }
