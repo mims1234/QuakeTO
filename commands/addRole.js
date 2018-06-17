@@ -53,11 +53,11 @@ module.exports.run = async (bot,message,args) => {
 
         try
         {
-            await reportschannel.send(`${role} role added to <@${rmember.id}>.`);
+            await rmember.send(`${role} role added to <@${rmember.id}>.`);
         }
         catch(e)
         {       
-            message.channel.send(`${role} role added to <@${rmember.id}> . (#quakerole-log was missing)`);
+            message.channel.send(`${role} role added to <@${rmember.id}> .`);
         }
     }
 }
