@@ -47,7 +47,6 @@ module.exports.run = async (bot,message,args) => {
 
         if(rmember.roles.has(gRole.id)) return message.channel.send(`${role} has been already added.`);
         await(rmember.addRole(gRole.id));
-        quakerole-log
 
         let reportschannel = message.guild.channels.find(`name` , "quakerole-log");
         if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
