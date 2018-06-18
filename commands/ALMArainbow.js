@@ -5,7 +5,7 @@ module.exports.run = async (bot,message,args) => {
     
     //if(message.author.id != '292675388180791297') return;
     let msg = message.content.split(' ')
-    let ColorFile = JSON.parse(fs.readFileSync("DataBase/rainbow.json","utf8"));
+    let ColorFile = JSON.parse(fs.readFileSync("./rainbow.json","utf8"));
     userlog = message.author.id 
     if(!message.guild.member(bot.user).hasPermission('MANAGE_ROLES')) return message.channel.send(`ALMA BOT doesn't have permission to run this command`)
 
