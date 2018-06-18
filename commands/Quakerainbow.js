@@ -13,7 +13,6 @@ module.exports.run = async (bot,message,args) => {
     code = msg[2]
     if(!SWITCH) return message.channel.send('Mention Swtich [ on || off ] \n**Usage: ** `xrainbow on <type>`').then(msg => msg.delete(5000));
     if(SWITCH === 'off') code = 'rainbow';
-    message.delete().catch();
 
     key = 1
     pin = 0;
