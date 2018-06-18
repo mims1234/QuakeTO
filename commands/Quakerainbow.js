@@ -11,7 +11,7 @@ module.exports.run = async (bot,message,args) => {
 
     SWITCH = msg[1]
     code = msg[2]
-    if(!SWITCH) return message.channel.send('Mention Swtich [ on || off ] \n**Usage: ** `a$rainbow on <type>`').then(msg => msg.delete(5000));
+    if(!SWITCH) return message.channel.send('Mention Swtich [ on || off ] \n**Usage: ** `xrainbow on <type>`').then(msg => msg.delete(5000));
     if(SWITCH === 'off') code = 'rainbow';
     message.delete().catch();
 
@@ -39,7 +39,7 @@ module.exports.run = async (bot,message,args) => {
         break;
         case 'ukraine' : var ColorCode = Object.keys(ColorFile.ukraine )
         break;
-        default : return message.channel.send('Mention Type [ `cop` || `rainbow` || `alien` || `mys` || `ukraine` ] \n**Usage: ** `a$rainbow on cop`').then(msg => msg.delete(5000));
+        default : return message.channel.send('Mention Type [ `cop` || `rainbow` || `alien` || `mys` || `ukraine` ] \n**Usage: ** `xrainbow on cop`').then(msg => msg.delete(5000));
     }
     if(message.guild.id === '395611752269873153')
     //if(message.guild.id === '395611752269873153' || message.guild.id === '442704155644264450' || message.guild.id === '435012543615074315' || message.guild.id === '436319015011483648' ) 
@@ -102,7 +102,7 @@ module.exports.run = async (bot,message,args) => {
                 }
                 else
                 {
-                    return message.channel.send('Please turn off the Rainbow mode before changing type \n**USe** `a$rainbow off` **to switch off Rainbow**')
+                    return message.channel.send('Please turn off the Rainbow mode before changing type \n**USe** `xrainbow off` **to switch off Rainbow**')
                     .then(msg => msg.delete(5000));
                 }
             }
