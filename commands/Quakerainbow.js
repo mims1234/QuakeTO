@@ -45,7 +45,7 @@ module.exports.run = async (bot,message,args) => {
     //if(message.guild.id === '395611752269873153' || message.guild.id === '442704155644264450' || message.guild.id === '435012543615074315' || message.guild.id === '436319015011483648' ) 
     {
         message.delete().catch();
-        CoolDown = JSON.parse(fs.readFileSync("GameBase/CoolDownMsg.json","utf8"));
+        CoolDown = JSON.parse(fs.readFileSync("./CoolDownMsg.json","utf8"));
         var CDkey = Object.keys(CoolDown)
         let guilds = message.guild
         let spaminterval = 10
