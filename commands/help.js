@@ -10,8 +10,11 @@ module.exports.run = async (bot,message,args) => {
     .setColor("#f20202")
     .addField("Prefix :","x")
     .addField("Commands :",`
-    **addrole** -> *Add's rainbow role to mentioned member*
-    **removerole** -> *Remove's rainbow role to mentioned member*
+    # **addrole @mention <rainbow | djrole>** :\n *Add's rainbow or djrole to mentioned member*
+# **delrole @mention <rainbow | djrole>** :\n *Remove's rainbow or djrole to mentioned member*
+# **rainbow <switch> <type>** : \n*Rainbow command*
+*type => [ cop | rainbow | alien | mys | ukraine]*
+*switch => [ on || off]*
     `);
 
     return message.channel.send(QuakeHelpEmbed);
