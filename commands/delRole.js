@@ -5,7 +5,7 @@ module.exports.run = async (bot,message,args) => {
     pin = 1
     let Sender = message.member;
     let user = message.author
-        let spaminterval = 0
+        let spaminterval = 10
             if (user.r1spam) {
                 if (new Date().getTime() - user.r1spam < (spaminterval)*1000) {
                     message.channel.send('Spam Alert! Wait for: ' + Math.floor(Math.round((spaminterval - (new Date().getTime() - user.r1spam) / 1000) * 100) / 100) + ' seconds')
@@ -27,7 +27,7 @@ module.exports.run = async (bot,message,args) => {
     {
         code = args[1]
         if(code === 'djrole') role = 'DJ Public'
-        if(code === 'rainbow') role = 'rainbow'
+        if(code === 'rainbow') role = 'Rainbow'
         if(code === 'guest')
         {
             let modRole = message.guild.roles.find('name','Mod') 
@@ -40,16 +40,12 @@ module.exports.run = async (bot,message,args) => {
         } 
         if(!code) return message.channel.send('has not mentioned role or doesnt have permission to add this role')
         let rmember = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        //console.log(message.member)
         if(!rmember) return message.reply("Couldn't find that user ");
         let gRole = message.guild.roles.find(`name`,role);
         if(!gRole) return message.reply("Couldn't find that role");
 
         if(!rmember.roles.has(gRole.id)) return message.channel.send(`Doesn't have that ${role}.`);
         await(rmember.removeRole(gRole.id));
-
-        //let reportschannel = message.guild.channels.find(`name` , "quakerole-log");
-        //if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
         try
         {
