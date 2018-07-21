@@ -68,7 +68,7 @@ bot.on("message" , async message => {
 
     if(cmd ==="mys" || cmd ==="Mys")
     {
-        return message.channel.send("Sprinkle Hearts Alein");
+        return message.channel.send("Sprinkle Hearts Alien");
     }
 
     if(cmd ==="caf" || cmd === "Caf")
